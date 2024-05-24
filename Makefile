@@ -24,4 +24,5 @@ fresh-start:
 	make prune && \
 	make build && \
 	make cnetwork && \
-	make run
+	make run && \
+	make logs-app
