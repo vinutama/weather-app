@@ -26,7 +26,7 @@ A simple weather service that provides current weather conditions for a given lo
     cd weather-app
     ```
 
-2. Go to https://www.visualcrossing.com to get your API Key
+2. Go to https://www.visualcrossing.com and Signup to get your API Key
 
 3. Create a `weather.env` file and add your Visual Crossing Weather API key:
     ```env
