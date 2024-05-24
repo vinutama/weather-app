@@ -30,7 +30,7 @@ A simple weather service that provides current weather conditions for a given lo
 
 3. Create a `weather.env` file and add your Visual Crossing Weather API key:
     ```env
-    WEATHER_API_KEY=your_api_key
+    WEATHER_API_KEY={your_api_key}
     WEATHER_API_URL=https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/
     ```
 4. Make sure you already installed `make` on your system
