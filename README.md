@@ -64,6 +64,7 @@ A simple weather service that provides current weather conditions for a given lo
       "data": {
         "currentWeather": {Object} // all details current weather on specified location,
         "location": {String},
+        "locationDetail": {String},
         "timezone": {String},
         "latitude": {Float},
         "longitude": {Float},
