@@ -1,19 +1,21 @@
-const {getWeatherFromAPI, getWeatherFromCache, cacheWeatherData} = require('../helpers');
+const {getWeatherFromAPI, getWeatherFromCache, cacheWeatherData, parsingWeatherData} = require('../helpers');
 
 module.exports = {
     getWeatherByLocationService: async (location) => {
         try {
             const cacheKey = `weather-${location}`;
-
-            const cachedWeatherData = await getWeatherFromCache(cacheKey);
-            if (cachedWeatherData) {
-                return cachedWeatherData;
+            let weatherData;
+            let fromCache = false;
+            weatherData = await getWeatherFromCache(cacheKey);
+            if (weatherData) {
+                fromCache = true;
             }
 
-            const freshWeatherData = await getWeatherFromAPI(location);
-            cacheWeatherData(cacheKey, freshWeatherData);
-
-            return freshWeatherData;
+            if (!fromCache) {
+                weatherData = await getWeatherFromAPI(location);
+                await cacheWeatherData(cacheKey, weatherData);
+            }
+            return parsingWeatherData(weatherData);
             
         } catch (err) {
             throw err;
