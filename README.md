@@ -67,7 +67,8 @@ A simple weather service that provides current weather conditions for a given lo
         "timezone": {String},
         "latitude": {Float},
         "longitude": {Float},
-        "hourlyWeather": {Array Object} // List of weather conditions hourly.
+        "hourlyWeather": {Array Object} // List of weather conditions hourly,
+        "todayWeatherSummary": {String} // Today summary weather condition.
       }
     }
     ```
