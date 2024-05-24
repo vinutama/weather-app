@@ -211,6 +211,7 @@ describe('weather API test', () => {
         },
         location: 'London',
         timezone: 'Europe/London',
+        locationDetail: "London, England, United Kingdom",
         latitude: 51.5064,
         longitude: -0.12721,
         hourlyWeather: [

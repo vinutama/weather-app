@@ -57,7 +57,7 @@ module.exports = {
         const keysToMap = {
             currentConditions: "currentWeather",
             address: "location",
-            resolveAddress: "locationDetail",
+            resolvedAddress: "locationDetail",
             timezone: "timezone",
             latitude: "latitude",
             longitude: "longitude",
