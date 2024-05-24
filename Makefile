@@ -19,9 +19,16 @@ prune:
 cnetwork:
 	docker network create integrity
 
+check-redis:
+	docker exec -it weather-redis redis-cli
+
+test-app:
+	docker exec -it weather-app npm test
+
 fresh-start:
 	make down && \
 	make prune && \
 	make build && \
 	make cnetwork && \
-	make run
+	make run && \
+	make logs-app
