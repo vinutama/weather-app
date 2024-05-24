@@ -8,7 +8,6 @@ module.exports = {
             return res.status(200).json({ message: `Weather on location ${location} retrieved`, data: weatherData});
         } catch (err) {
             const errMsg = err.message;
-            console.log(errMsg, "ERRMSG")
             if (errMsg.includes("Inputted location does not exist")) {
                 return res.status(400).json({error: err.message});
             }

@@ -18,7 +18,6 @@ const RedisClient = () => {
             console.error(`Error connecting to Redis: ${err}`);
         });
 
-        console.log("CLIENTTTT>>>>", redisClient)
     }
 
     return redisClient;
